@@ -1,5 +1,5 @@
 import type { Config } from 'tailwindcss'
-
+// TODO: font family
 export default <Partial<Config>>{
   theme: {
     extend: {
