@@ -1,5 +1,5 @@
 <template>
-    <header class="h-12 w-full bg-zinc-500 flex items-center px-4">
-        <IconsIconLogo :width="32" :height="32"></IconsIconLogo>
+    <header class="h-36 w-full flex items-center">
+        <IconsIconLogo :width="89" :height="89"></IconsIconLogo>
     </header>
 </template>
