@@ -8,6 +8,8 @@ export default <Partial<Config>>{
         ternary: "#F582C7",
         accent_1: '#FFB3B3',
         accent_2: '#F62BE5',
+        linear_from: '#CD64A3',
+        linear_to: '#551F40',
         background: '#000000',
         foreground: '#5E5E5E'
       },
