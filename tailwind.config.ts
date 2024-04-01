@@ -2,6 +2,10 @@ import type { Config } from 'tailwindcss'
 // TODO: font family
 export default <Partial<Config>>{
   theme: {
+    fontFamily: {
+      'rubik-mono': ['"Rubik Mono One"'],
+      'arial-black': ['"Arial black"']
+    },
     extend: {
       colors: {
         primary: '#F2AED7',
@@ -13,7 +17,6 @@ export default <Partial<Config>>{
         background: '#000000',
         foreground: '#5E5E5E'
       },
-
     },
 
   },

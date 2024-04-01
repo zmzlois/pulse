@@ -1,19 +1,15 @@
 <template>
-    <div class="w-full h-full flex items-center justify-center">
-        <div
-            :class="zIndex[itteration].overlay"
-            class="bg-background w-full h-80 absolute">
-        </div>
 
         <h2 v-for="(item, index) in title" 
                 :key="index" 
-                :class="zIndex[itteration].title" 
-                class="text-[24rem] font-extrabold tracking-tight bg-clip-text bg-gradient-to-r from-linear_from to-linear_to text-transparent">
+                :class="{'rotate-[-3deg]': index === 3}"
+                class="text-[26.125rem] h-[30.3rem] translate-x-8 font-arial-black tracking-[-2.7rem] bg-clip-text bg-gradient-to-r from-linear_from to-linear_to text-transparent">
                 <span 
+                    class="block -translate-x-8"
                     :class="[index == 1 ? 'text-ternary' : 'text-white', opacity[itteration]]"
                 >{{item}}</span>
         </h2>
-    </div>
+
 </template>
 
 <script setup lang="ts">
@@ -29,9 +25,9 @@
     ]
 
     const opacity = [
-        'opacity-100',
+        'opacity-40',
         'opacity-70',
-        'opacity-40'
+        'opacity-100'
     ]
 
 </script>
