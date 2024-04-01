@@ -9,7 +9,7 @@
         font-style: normal;
         font-weight: 400;
         font-display: swap;
-        src: url(/assets/fonts/RubikMonoOne-Regular.ttf) format('woff2');
+        src: url(/assets/fonts/RubikMonoOne-Regular.woff2) format('woff2');
       }
 }
 
@@ -19,6 +19,6 @@
         font-style: normal;
         font-weight: 400;
         font-display: swap;
-        src: url(/assets/fonts/ArialBlack.ttf) format('woff2');
+        src: url(/assets/fonts/ArialBlack.woff2) format('woff2');
       }
 }
