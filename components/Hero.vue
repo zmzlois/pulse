@@ -1,11 +1,15 @@
 <template>
-    <div class="bg-center h-[400px] flex items-center justify-center relative pt-16">
+    <div class="bg-center h-[calc(100vh-60vh)] w-full flex items-center justify-center relative pt-16">
       <div v-for="i in 3" 
-        class="absolute w-full flex items-end justify-center translate-y-[11.5rem] overflow-hidden"
+        class="absolute flex items-end justify-center translate-y-[11.5rem] overflow-hidden"
         :class="[animations[i - 1], overlayHeight[i - 1]]" >
         
-        <HeroTitle :itteration="i - 1"></HeroTitle>
+        <HeroTitle :iteration="i - 1"></HeroTitle>
+        
       </div>
+      <div class="relative w-full flex items-end justify-start translate-y-[16.5rem] overflow-hidden">
+        <HeroSubtitle/>
+     </div>
     </div>
 </template>
 

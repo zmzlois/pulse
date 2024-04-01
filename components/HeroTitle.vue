@@ -2,11 +2,11 @@
 
         <h2 v-for="(item, index) in title" 
                 :key="index" 
-                :class="{'rotate-[-3deg]': index === 3}"
-                class="text-[26.125rem] h-[30.3rem] translate-x-8 font-arial-black tracking-[-2.7rem] bg-clip-text bg-gradient-to-r from-linear_from to-linear_to text-transparent">
+                :class="{'rotate-[-3deg] px-[10px]': index === 3}"
+                class="text-[26.125rem] h-[30.3rem] translate-x-8 font-arial-black tracking-[-2.7rem] bg-clip-text bg-gradient-to-br from-linear_from to-linear_to text-transparent">
                 <span 
                     class="block -translate-x-8"
-                    :class="[index == 1 ? 'text-ternary' : 'text-white', opacity[itteration]]"
+                    :class="[index == 1 ? 'text-ternary' : 'text-white', opacity[iteration]]"
                 >{{item}}</span>
         </h2>
 
@@ -14,7 +14,7 @@
 
 <script setup lang="ts">
     defineProps<{
-        itteration: number
+        iteration: number
     }>()
     const title = 'PULSE'
 

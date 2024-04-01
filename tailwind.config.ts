@@ -17,9 +17,43 @@ export default <Partial<Config>>{
         background: '#000000',
         foreground: '#5E5E5E'
       },
-    },
+      animation: {
+        "go-up-16": "go-up-16 cubic-bezier(.96,-0.22,.59,.94) 1s forwards",
+        "go-up-8": "go-up-8 cubic-bezier(.96,-0.22,.59,.94) 1s forwards",
+        "go-down": "go-down cubic-bezier(.96,-0.22,.59,.94) 1s forwards",
+      },
+      keyframes: {
+        "go-up-16": {
+          "0%": {
+            transform: "translateY(0)"
+          },
+          "100%": {
+            transform: "translateY(-5rem)"
+          }
+        },
+        "go-up-8": {
+          "0%": {
+            transform: "translateY(11.6rem)"
+          },
+          "100%": {
+            transform: "translateY(9.2rem)"
+          }
+        },
+        "go-down": {
+          "0%": {
+            opacity: 0,
+            transform: "translateY(-5rem)"
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateY(0)"
+          }
 
-  },
-  variants: {
+        },
+
+      },
+      variants: {
+      },
+    }
   },
 }

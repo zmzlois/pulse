@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.11",
+    "@vueuse/motion": "^2.1.0",
+    "gsap": "^3.12.5",
     "nuxt": "^3.11.1",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
