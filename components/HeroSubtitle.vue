@@ -1,47 +1,40 @@
 <template>
-<div class="flex gap-2">
-    <Transition
-    :key="index" 
-    v-for="item, index in splitted"
-    id="word-{{ index }}"
-    :data-index="index"
-    class="text-6xl tracking-tighter font-extrabold   text-accent_2"
-   >
-     <span :class="[delays[index]]" class="go-down">{{item}}&nbsp;&nbsp;</span> 
-    </Transition>
-</div>
+  <div class="flex gap-2">
+    <div class="flex">
+      <span
+        v-for="(item, index) in splitted"
+        :key="index"
+        class="go-down text-accent_2 text-4xl tracking-tighter font-extrabold block"
+        :style="`--animation-order: ${index}`"
+        >{{ item }}&nbsp;&nbsp;</span
+      >
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
-
-
-const sentence = "MED EXAM PREP MADE WELL"
-const splitted = sentence.split(' ')
-
-const delays = [
-    "delay-[1000ms]",
-    "delay-[1300ms]",
-    "delay-[1600ms]",
-    "delay-[1900ms]",
-    "delay-[2100ms]",
-]
-
-
-
+const sentence = "MED EXAM PREP MADE WELL";
+const splitted = sentence.split(" ");
+// TODO: They are not animated by sequence, how to fix this?
 </script>
 
 <style>
 .go-down {
-    animation: go-down cubic-bezier(.96,-0.22,.59,.94) 1s ease-in forwards;
+  animation-name: go-down;
+  animation-duration: 350ms;
+  animation-delay: calc(var(--animation-order) * 3000);
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes go-down {
-    0% {
-        transform: translateY(-5rem);
-    }
-    100% {
-        transform: translateY(0)
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(-5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-
 </style>

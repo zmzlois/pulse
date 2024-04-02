@@ -1,3 +1,1 @@
-<template>
-    quiz
-</template>
+<template>quiz</template>

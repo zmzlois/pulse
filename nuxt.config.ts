@@ -6,6 +6,6 @@ export default defineNuxtConfig({
     cssPath: "./assets/css/tailwind.css",
     configPath: "tailwind.config.ts",
     editorSupport: true,
-    viewer: true
-  }
-})
+    viewer: true,
+  },
+});
