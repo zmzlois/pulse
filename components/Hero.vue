@@ -1,17 +1,21 @@
 <template>
-  <div
-    class="bg-center h-[calc(100vh-60vh)] w-full flex items-center justify-center relative pt-16"
-  >
+  <div class="flex w-full flex-col-reverse bg-center">
+    <!-- <div
+      v-for="i in 3"
+      class="translate-y-[11.5rem] z-50 overflow-y-hidden overflow-x-clip"
+      :class="[animations[i - 1], overlayHeight[i - 1]]"
+    >
+      <HeroTitle :iteration="i - 1"></HeroTitle>
+    </div> -->
     <div
       v-for="i in 3"
-      class="absolute flex items-end justify-center translate-y-[11.5rem] overflow-hidden"
+      class="z-50 flex items-end overflow-y-hidden overflow-x-clip"
       :class="[animations[i - 1], overlayHeight[i - 1]]"
     >
       <HeroTitle :iteration="i - 1"></HeroTitle>
     </div>
   </div>
-  <div class="relative translate-y-10"><HeroSubtitle /></div>
-  <div class="relative translate-y-10"><HeroVideo /></div>
+  <div class="relative"><HeroVideo /></div>
 </template>
 
 <script setup lang="ts">
@@ -31,19 +35,19 @@ const overlayHeight = ["h-8", "h-8", "h-full"];
 
 @keyframes go-up-16 {
   0% {
-    transform: translateY(0);
+    transform: translateY(4rem);
   }
   100% {
-    transform: translateY(-5rem);
+    transform: translateY(0);
   }
 }
 
 @keyframes go-up-8 {
   0% {
-    transform: translateY(11.5rem);
+    transform: translateY(2rem);
   }
   100% {
-    transform: translateY(9rem);
+    transform: translateY(0);
   }
 }
 </style>
