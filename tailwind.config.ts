@@ -22,6 +22,9 @@ export default <Partial<Config>>{
         "go-up-8": "go-up-8 cubic-bezier(.96,-0.22,.59,.94) 1s forwards",
         "go-down": "go-down cubic-bezier(.96,-0.22,.59,.94) 1s forwards",
       },
+      screens: {
+        "xs": "320px",
+      },
       keyframes: {
         "go-up-16": {
           "0%": {
