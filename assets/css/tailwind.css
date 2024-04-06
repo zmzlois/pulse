@@ -10,14 +10,21 @@
     font-display: swap;
     src: url(/assets/fonts/RubikMonoOne-Regular.woff2) format("woff2");
   }
-}
 
-@layer base {
   @font-face {
     font-family: "Arial black";
     font-style: normal;
     font-weight: 400;
     font-display: swap;
     src: url(/assets/fonts/ArialBlack.woff2) format("woff2");
+  }
+  .v-enter-active,
+  .v-leave-active {
+    transition: opacity 0.5s ease;
+  }
+
+  .v-enter-from,
+  .v-leave-to {
+    opacity: 0;
   }
 }
